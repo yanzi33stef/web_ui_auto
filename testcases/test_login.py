@@ -15,7 +15,7 @@ class TestLogin(unittest.TestCase):
         cls.driver = webdriver.Chrome()
         cls.driver.maximize_window()
         # 设置隐式等待
-        cls.driver.implicitly_wait(30)
+        cls.driver.implicitly_wait(10)
 
     @classmethod
     def tearDownClass(cls):

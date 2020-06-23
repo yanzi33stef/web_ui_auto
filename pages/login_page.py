@@ -20,20 +20,20 @@ class LoginPage(BasePage):
         self.driver.get(url)
 
         # 输入账号
-        self.driver.find_element(*self.account_locator).send_keys(account)
+        self.get_account_ele().send_keys(account)
         # 输入密码
-        self.driver.find_element(*self.pwd_locator).send_keys(pwd)
+        self.get_pwd_ele().send_keys(pwd)
         # 点击登录
-        self.driver.find_element(*self.button_locator).click()
+        self.get_login_button().click()
 
     def get_account_ele(self):
-        return self.driver.find_element(*self.account_locator)
+        return self.get_ele(self.account_locator)
 
     def get_pwd_ele(self):
-        return self.driver.find_element(*self.pwd_locator)
+        return self.get_ele(self.pwd_locator)
 
     def get_login_button(self):
-        return self.driver.find_element(*self.button_locator)
+        return self.get_ele(self.button_locator)
 
     def get_error_msg(self):
         return self.wait_ele_visible(self.error_msg_locator)

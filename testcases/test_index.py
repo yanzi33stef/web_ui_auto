@@ -21,7 +21,7 @@ class TestIndex(unittest.TestCase):
         cls.driver = webdriver.Chrome()
         cls.driver.maximize_window()
 
-        cls.driver.implicitly_wait(30)
+        cls.driver.implicitly_wait(10)
 
     @classmethod
     def tearDownClass(cls):

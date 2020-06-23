@@ -7,13 +7,20 @@ from datetime import datetime
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import TimeoutException, NoSuchElementException
 
 
 class BasePage:
 
     def __init__(self, driver):
         self.driver = driver
+
+    def get_ele(self, locator):
+        """不需要显示等待"""
+        try:
+            return self.driver.find_element(*locator)
+        except NoSuchElementException:
+            logging.error("元素定位失败")
 
     def wait_ele_visible(self, locator, timeout=30):
         """等待元素可见"""
