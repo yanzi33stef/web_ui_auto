@@ -6,7 +6,7 @@ class IndexPage(BasePage):
     """首页"""
     # 元素定位:
     index_add_course_up_locator = (By.XPATH, "//div[contains(@class, 'ktcon1l')]")
-    index_add_course_down_locator = (By.XPATH, "//p[text()='入课程']")
+    index_add_course_down_locator = (By.XPATH, "//p[text()='加入课程']")
     add_course_code_locator = (By.XPATH, "//div[@class='chuangjiankccon']/input[@type='text']")
     add_course_ok_btn_locator = (By.XPATH, "//li[@class='cjli2']/a[@class='btn btn-positive']")
     add_course_cancel_locator = (By.XPATH, "//a[@class='btn btn-defalut']")
