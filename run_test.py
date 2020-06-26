@@ -19,7 +19,7 @@ loader = unittest.TestLoader()
 suite.addTest(loader.discover(CASE_DIR))
 
 # 第三步：创建一个测试用例运行程序
-report_path = os.path.join(REPORT_DIR, "report_{}.html".format(now_time))
+report_path = os.path.join(REPORT_DIR, "report.html")
 
 with open(report_path, "wb") as f:
     runner = HTMLTestRunner(stream=f,
