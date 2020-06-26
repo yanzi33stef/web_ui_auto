@@ -4,7 +4,6 @@ from pages.base_page import BasePage
 
 class IndexPage(BasePage):
     """首页"""
-
     # 元素定位:
     index_add_course_up_locator = (By.XPATH, "//div[contains(@class, 'ktcon1l')]")
     index_add_course_down_locator = (By.XPATH, "//p[text()='入课程']")
